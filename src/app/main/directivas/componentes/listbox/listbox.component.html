@@ -1,0 +1,25 @@
+<ng-template [ngIf]="visible">
+    <div class="col-12">
+        <div role="group" class="form-row">
+            <div class="col-12">
+                <label>{{nombre}}</label>
+            </div>
+            <div class="col">
+                <select 
+                    id={{id}}
+                    class="form-control" 
+                    style="width: {{ancho}}%" 
+                    (change)="capturar(id)"
+                    [(ngModel)]="element"
+                >
+                    <option value="0"></option>
+                    <ng-container *ngIf="listaElement.length>0">
+                        <option *ngFor="let element of listaElement" value={{element.id}}>
+                            {{element.descripcion}}
+                        </option>
+                    </ng-container>
+                </select>
+            </div>
+        </div>
+    </div>
+</ng-template>

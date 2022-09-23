@@ -1,0 +1,17 @@
+<div class="col-12">
+    <div role="group" class="form-row">
+        <div class="col-12">
+            <label>{{nombre}}</label>
+        </div>
+        <div class="col">
+            <input 
+                id={{id}}
+                name="txt_fecha" 
+                type="date"                      
+                class="form-control" 
+                style="width:{{ancho}}%;"
+                (change)="capturar(id,$event)"
+            >
+        </div>
+    </div>
+</div>

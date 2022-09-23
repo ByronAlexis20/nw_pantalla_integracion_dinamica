@@ -1,0 +1,21 @@
+<ng-template [ngIf]="visible">
+    <div class="col-12">
+        <div role="group" class="form-row">
+            <div class="col-12">
+                <label>{{nombre}}</label>
+            </div>
+            <div class="col">
+                <input 
+                    id={{id}}
+                    type={{tipo}}
+                    placeholder={{holder}} 
+                    class="form-control" 
+                    [readonly]="estado"
+                    value={{valor}}
+                    (change)="capturar(id,$event)"
+                    style="width: {{ancho}}%;"
+                >
+            </div>
+        </div>
+    </div>
+</ng-template>
